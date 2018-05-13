@@ -13,7 +13,7 @@ class Scraper
         student_location = student.css("p").text
         student_link = student.css("a").attribute("href").value
     students << {name: student_name, location: student_location, profile_url: student_link}
-
+   binding.pry
    end
    students
 end
@@ -34,7 +34,7 @@ end
       elsif link.include?("linkedin")
         student_profile[:linkedin] = link
       else link.include?("blog")
-        student_profile[:blog] = link 
+        student_profile[:blog] = link
       end
     end
 
